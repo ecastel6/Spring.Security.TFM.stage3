@@ -24,9 +24,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.dataSource(dataSource)
 				.authoritiesByUsernameQuery("select username, role from user_roles where username =?")
 				.usersByUsernameQuery("select username,password, enabled from users where username=?");
-		/*auth.inMemoryAuthentication().withUser("mkyong").password("123456").roles("USER");
-		auth.inMemoryAuthentication().withUser("admin").password("123456").roles("ADMIN");
-		auth.inMemoryAuthentication().withUser("dba").password("123456").roles("DBA");*/
 	}
 
 	@Override

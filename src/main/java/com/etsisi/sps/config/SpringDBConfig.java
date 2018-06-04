@@ -37,11 +37,9 @@ public class SpringDBConfig {
 
 	@PostConstruct
 	public void startDBManager() {
-
 		// hsqldb
 		// DatabaseManagerSwing.main(new String[] { "--url",
 		// "jdbc:hsqldb:mem:testdb", "--user", "sa", "--password", "" });
-
 	}
 
 }
