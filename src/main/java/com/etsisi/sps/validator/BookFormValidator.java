@@ -27,7 +27,6 @@ public class BookFormValidator implements Validator {
 	public void validate(Object target, Errors errors) {
 
 		Book book = (Book) target;
-        String PRICE_PATTERN = "[.0-9]+";
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "author", "NotEmpty.bookForm.author");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "title", "NotEmpty.bookForm.title");
@@ -35,6 +34,7 @@ public class BookFormValidator implements Validator {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "description", "NotEmpty.bookForm.description");
 
 		// numeric values only
+		String PRICE_PATTERN = "[.0-9]+";
         if (book.getPrice() != null) {
             Pattern pattern = Pattern.compile(PRICE_PATTERN);
             Matcher matcher = pattern.matcher(book.getPrice().toString());

@@ -179,42 +179,6 @@ public class BookController {
         return "books/show";
 
     }
-/*
-	private void populateDefaultModel(Model model) {
-
-		List<String> frameworksList = new ArrayList<String>();
-		frameworksList.add("Spring MVC");
-		frameworksList.add("Struts 2");
-		frameworksList.add("JSF 2");
-		frameworksList.add("GWT");
-		frameworksList.add("Play");
-		frameworksList.add("Apache Wicket");
-		model.addAttribute("frameworkList", frameworksList);
-
-		Map<String, String> skill = new LinkedHashMap<String, String>();
-		skill.put("Hibernate", "Hibernate");
-		skill.put("Spring", "Spring");
-		skill.put("Struts", "Struts");
-		skill.put("Groovy", "Groovy");
-		skill.put("Grails", "Grails");
-		model.addAttribute("javaSkillList", skill);
-
-		List<Integer> numbers = new ArrayList<Integer>();
-		numbers.add(1);
-		numbers.add(2);
-		numbers.add(3);
-		numbers.add(4);
-		numbers.add(5);
-		model.addAttribute("numberList", numbers);
-
-		Map<String, String> country = new LinkedHashMap<String, String>();
-		country.put("US", "United Stated");
-		country.put("CN", "China");
-		country.put("SG", "Singapore");
-		country.put("MY", "Malaysia");
-		model.addAttribute("countryList", country);
-
-	}*/
 
     @ExceptionHandler(EmptyResultDataAccessException.class)
     public ModelAndView handleEmptyData(HttpServletRequest req, Exception ex) {
